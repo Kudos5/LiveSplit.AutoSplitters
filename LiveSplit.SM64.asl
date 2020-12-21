@@ -90,6 +90,7 @@ init {
     vars.enterBitDW = 0;
     vars.enterBitFS = 0;
     vars.enterBitS = 0;
+    vars.enterDdd = 0;
 
 
     vars.course1 = 0;
@@ -125,7 +126,8 @@ startup {
     settings.Add("switchSplit", false, "Switch activation", "miscSplitOption");
     settings.Add("enterCastleSplit", false, "entering Castle", "miscSplitOption");
     settings.Add("enterBitdwSplit", false, "entering BitDW", "miscSplitOption");
-    settings.Add("enterBitfsSplit", false, "entering DDD/BitFS", "miscSplitOption");
+    settings.Add("enterBitfsSplit", false, "BitFS", "miscSplitOption");
+    settings.Add("enterDddsSplit", false, "DDD", "miscSplitOption");
     settings.Add("enterBitsSplit", false, "entering BitS", "miscSplitOption");
     settings.Add("settingsReset", true, "Reset Settings");
     settings.Add("gameResetReset", false, "Reset on Game Reset", "settingsReset");
@@ -206,8 +208,12 @@ split {
         vars.enterBitDW = 1;
         return true;
     }
-    if (settings["enterBitfsSplit"] && vars.enterBitFS == 0 && (current.mapID == 19 || current.mapID == 23)) {
+    if (settings["enterBitfsSplit"] && vars.enterBitFS == 0 && current.mapID == 19) {
         vars.enterBitFS = 1;
+        return true;
+    }
+    if (settings["enterDddSplit"] && vars.enterDdd == 0 && current.mapID == 23) {
+        vars.enterDdd = 1;
         return true;
     }
     if (settings["enterBitsSplit"] && vars.enterBitS == 0 && current.mapID == 21) {
