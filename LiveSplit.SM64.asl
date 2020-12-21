@@ -126,8 +126,8 @@ startup {
     settings.Add("switchSplit", false, "Switch activation", "miscSplitOption");
     settings.Add("enterCastleSplit", false, "entering Castle", "miscSplitOption");
     settings.Add("enterBitdwSplit", false, "entering BitDW", "miscSplitOption");
-    settings.Add("enterBitfsSplit", false, "BitFS", "miscSplitOption");
-    settings.Add("enterDddsSplit", false, "DDD", "miscSplitOption");
+    settings.Add("enterBitfsSplit", false, "entering BitFS", "miscSplitOption");
+    settings.Add("enterDddsSplit", false, "entering DDD", "miscSplitOption");
     settings.Add("enterBitsSplit", false, "entering BitS", "miscSplitOption");
     settings.Add("settingsReset", true, "Reset Settings");
     settings.Add("gameResetReset", false, "Reset on Game Reset", "settingsReset");
